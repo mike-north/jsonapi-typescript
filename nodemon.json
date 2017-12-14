@@ -1,0 +1,7 @@
+{
+  "watch": [
+    "tests/**/*.ts",
+    "index.d.ts"
+  ],
+  "ext": "ts js json"
+}
