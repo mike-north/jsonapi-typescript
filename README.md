@@ -1,4 +1,4 @@
-# JSONAPI.ts
+# JSONAPI.ts <img src="https://travis-ci.org/mike-north/jsonapi.ts.svg?branch=master" align='right'>
 TypeScript ambient type information for compile-time validation of the [JSONAPI document specification](http://jsonapi.org/format/).
 
 ## How to use this
