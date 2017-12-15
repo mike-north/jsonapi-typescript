@@ -1,3 +1,4 @@
 -r ts-node/register
 --timeout 10000
+--slow 2000
 tests/**/*.test.ts

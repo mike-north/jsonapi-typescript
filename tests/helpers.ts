@@ -1,28 +1,28 @@
 import { assert } from 'chai';
 import { check } from 'typings-tester';
-import { join } from 'path';
-
-export function assertTsThrows(fileName: string, message?: string): void;
-// export function assertTsThrows(fileName: string, errType: RegExp|Function);
-export function assertTsThrows(fileName: string, errType: RegExp|Function, message?: string): void;
-export function assertTsThrows(fileName: string, errType: Function, regExp: RegExp): void;
-export function assertTsThrows(
+import { join, dirname } from 'path';
+import * as tsconfig from 'tsconfig';
+export async function assertTsThrows(fileName: string, message?: string): Promise<void>;
+export async function assertTsThrows(fileName: string, errType: RegExp|Function, message?: string): Promise<void>;
+export async function assertTsThrows(fileName: string, errType: Function, regExp: RegExp): Promise<void>;
+export async function assertTsThrows(
 	fileName: string,
   errType?: string | RegExp | Function,
   message?: string | RegExp
-): void {
+): Promise<void> {
   return tsFileAssert(fileName, errType, message, assert.throws);
 }
-function tsFileAssert(
+async function tsFileAssert(
 	fileName: string,
   errType?: string | RegExp | Function,
   message?: string | RegExp,
   assertMethod = assert.throws
-): void {
+): Promise<void> {
+  let typescriptConfig = await tsconfig.resolve(dirname(fileName));
   let cb = () => {
     check(
-      [join(__dirname, fileName)],
-      join(__dirname, '..', '..', 'tsconfig.json')
+      [fileName],
+      typescriptConfig as string
     );
   };
   if (!errType) {
@@ -36,11 +36,4 @@ function tsFileAssert(
   } else {
     assertMethod(cb, errType);
   }
-}
-
-export function assertTsNoThrows(
-	fileName: string,
-  message: string
-): void {
-  return tsFileAssert(fileName, undefined, message,  assert.doesNotThrow);
 }

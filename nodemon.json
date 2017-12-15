@@ -1,6 +1,10 @@
 {
+  "exec": "./node_modules/.bin/ts-node",
   "watch": [
     "tests/**/*.ts",
+    "tests/tsconfig.json",
+    "tests/mocha.opts",
+    "tsconfig.json",
     "index.d.ts"
   ],
   "ext": "ts js json"
