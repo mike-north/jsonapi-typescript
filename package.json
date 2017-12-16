@@ -1,6 +1,6 @@
 {
   "name": "jsonapi.ts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "TypeScript ambient definitions for JSON-API",
   "main": "jsonapi/index.d.ts",
   "scripts": {
@@ -39,6 +39,6 @@
     "typings-tester": "^0.3.0"
   },
   "dependencies": {
-    "json-typescript": "~0.0.3"
+    "json-typescript": "~0.0.5"
   }
 }
