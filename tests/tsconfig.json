@@ -16,9 +16,9 @@
     "noEmitOnError": true,
     "noEmit": true,
     "typeRoots": [
-      "node_modules/@types",
-      "node_modules/json-typescript/types",
-      "../types"
+      "../node_modules/@types",
+      "../node_modules/json-typescript/types",
+      ".."
     ]
   },
   "exclude": [
@@ -27,6 +27,7 @@
     "**/*test.ts"
   ],
   "include": [
+    "../jsonapi/index.d.ts",
     "**/*.ts"
   ]
 }

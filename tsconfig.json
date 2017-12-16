@@ -17,14 +17,14 @@
 		"noEmit": true,
 		"typeRoots": [
 			"node_modules/@types",
-			"node_modules/json-typescript/types",
-			"types"
+			"node_modules/json-typescript"
 		]
 	},
 	"exclude": [
 		"node_modules/**/*"
 	],
 	"include": [
+		"jsonapi/index.d.ts",
 		"tests/helpers.ts",
 		"tests/**/*test.ts"
 	]
