@@ -87,7 +87,11 @@ declare namespace JSONAPI {
 		type: string;
 		meta?: MetaObject;
 	}
-	type ResourceLinkage = null | never[] | ResourceIdentifierObject;
+	type ResourceLinkage =
+		| null
+		| never[]
+		| ResourceIdentifierObject
+		| ResourceIdentifierObject[];
 	namespace Relationships {
 		interface WithLinks {
 			links: Links;
