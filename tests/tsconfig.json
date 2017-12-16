@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "lib": [
+      "es2015"
+    ],
+    "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "noUnusedParameters": true,
+    "noEmitOnError": true,
+    "noEmit": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/json-typescript/types",
+      "../types"
+    ]
+  },
+  "exclude": [
+    "..node_modules/**/*",
+    "helpers.ts",
+    "**/*test.ts"
+  ],
+  "include": [
+    "**/*.ts"
+  ]
+}

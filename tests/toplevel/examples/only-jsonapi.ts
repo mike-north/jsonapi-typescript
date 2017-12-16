@@ -1,4 +1,3 @@
-import '../../../index';
 let doc: JSONAPI.Document = {
-  jsonapi: { version: '1.0' }
+	jsonapi: { version: '1.0' }
 };

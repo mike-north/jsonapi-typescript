@@ -1,20 +1,11 @@
 // tslint:disable-next-line:no-namespace
 declare namespace JSONAPI {
-	namespace JSON {
-		type Primitive = string | number | boolean | null;
-		type Value = Primitive | Object | List;
-		interface Object {
-			[member: string]: Value;
-		}
-		interface List extends Array<Value> {}
-	}
-
 	/*
-			A JSON object MUST be at the root of every JSON API request and response
-			containing data. This object defines a document’s “top level”.
+	A JSON object MUST be at the root of every JSON API request and response
+	containing data. This object defines a document’s “top level”.
 
-			A document MUST contain at least one of the following top-level members:
-			*/
+	A document MUST contain at least one of the following top-level members:
+	*/
 
 	type MetaObject = JSON.Object;
 	interface DocWithMeta extends DocBase {

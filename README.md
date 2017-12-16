@@ -1,5 +1,5 @@
-# JSONAPI.ts <img src="https://travis-ci.org/mike-north/jsonapi.ts.svg?branch=master" align='right'>
-TypeScript type information for compile-time validation of the [JSONAPI document specification](http://jsonapi.org/format/).
+# JSON.ts <a href="https://travis-ci.org/mike-north/jsonapi.ts"  align='right'><img src="https://travis-ci.org/mike-north/jsonapi.ts.svg?branch=master"></a>
+TypeScript ambient type information for compile-time validation of [JSON:API documents](https://www.jsonapi.org/).
 
 ## How to use this
 
@@ -8,16 +8,25 @@ TypeScript type information for compile-time validation of the [JSONAPI document
 npm install --save-dev jsonapi.ts
 ```
 
-2. Import the types into the files where you wish to use them
-```ts
-import 'jsonapi.ts';
+2. Include this module in your `tsconfig.json`'s `typeRoots`
+```json
+{
+  "compilerOptions": {
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/json-typescript",
+      "node_modules/jsonapi.ts"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
 ```
-> **NOTE:** You can add the types across your whole project by opening your `./global.d.ts` ambient type file (or create an empty file if it doesn't yet exist) and adding the same import
 
-3. check to see if JSONAPI types are validated correctly
+3. check to see if json types are validated correctly
 
 ```ts
-import 'jsonapi.ts';
 
 // ✅ This should be OK
 let doc: JSONAPI.Document = {
@@ -27,10 +36,13 @@ let doc: JSONAPI.Document = {
   }
 };
 
-// ⛔️ This should NOT be OK ( data, errors or meta property is required )
+// ⛔️ This should NOT be OK ("result" is not a valid JSON:API top-level key)
 let doc: JSONAPI.Document = {
-  jsonapi: { version: '1.0' }
+  result: "Success!"
 };
+
+// ⛔️ This should NOT be OK ( empty Array is not a valid JSON:API document )
+let doc: JSONAPI.Document = [];
 ```
 
 ## Copyright

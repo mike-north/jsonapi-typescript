@@ -1,8 +1,8 @@
 {
   "name": "jsonapi.ts",
-  "version": "0.0.1",
-  "description": "JSON-API TypeScript ambient definitions",
-  "main": "index.d.ts",
+  "version": "0.0.2",
+  "description": "TypeScript ambient definitions for JSON-API",
+  "main": "jsonapi/index.d.ts",
   "scripts": {
     "test": "tsc && ./node_modules/.bin/mocha --opts tests/mocha.opts",
     "lint": "./node_modules/.bin/tslint -p .",
@@ -28,7 +28,6 @@
     "@types/chai": "^4.0.10",
     "@types/mocha": "^2.2.44",
     "chai": "^4.1.2",
-    "chalk": "^2.3.0",
     "dtslint": "^0.2.0",
     "mocha": "^4.0.1",
     "mocha-typescript": "^1.1.12",
@@ -38,5 +37,8 @@
     "tslint": "^5.8.0",
     "typescript": "^2.6.2",
     "typings-tester": "^0.3.0"
+  },
+  "dependencies": {
+    "json-typescript": "~0.0.3"
   }
 }
