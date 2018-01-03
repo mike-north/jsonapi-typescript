@@ -1,4 +1,6 @@
 # JSON.ts <a href="https://travis-ci.org/mike-north/jsonapi.ts"  align='right'><img src="https://travis-ci.org/mike-north/jsonapi.ts.svg?branch=master"></a>
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/mike-north/jsonapi.ts.svg)](https://greenkeeper.io/)
 TypeScript ambient type information for compile-time validation of [JSON:API documents](https://www.jsonapi.org/).
 
 ## How to use this
