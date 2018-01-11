@@ -14,12 +14,7 @@
     "sourceMap": true,
     "noUnusedParameters": true,
     "noEmitOnError": true,
-    "noEmit": true,
-    "typeRoots": [
-      "../node_modules/@types",
-      "../node_modules/json-typescript/types",
-      ".."
-    ]
+    "noEmit": true
   },
   "exclude": [
     "..node_modules/**/*",
@@ -27,7 +22,6 @@
     "**/*test.ts"
   ],
   "include": [
-    "../jsonapi/index.d.ts",
     "**/*.ts"
   ]
 }

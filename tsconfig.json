@@ -14,18 +14,14 @@
 		"sourceMap": true,
 		"noUnusedParameters": true,
 		"noEmitOnError": true,
-		"noEmit": true,
-		"typeRoots": [
-			"node_modules/@types",
-			"node_modules/json-typescript"
-		]
+		"noEmit": true
 	},
 	"exclude": [
 		"node_modules/**/*"
 	],
 	"include": [
-		"jsonapi/index.d.ts",
-		"tests/helpers.ts",
-		"tests/**/*test.ts"
+		"./index.ts",
+		"./tests/helpers.ts",
+		"./tests/**/*test.ts"
 	]
 }

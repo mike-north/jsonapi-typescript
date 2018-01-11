@@ -3,6 +3,7 @@ import { assert } from 'chai';
 import { check, checkDirectory } from 'typings-tester';
 import { join } from 'path';
 import { assertTsThrows } from '../helpers';
+import JSONAPI from '../../index';
 
 @suite('Resource objects')
 class ResourceTests {
