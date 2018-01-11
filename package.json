@@ -1,7 +1,7 @@
 {
 	"name": "jsonapi-typescript",
 	"version": "0.0.6",
-	"description": "TypeScript ambient definitions for JSON-API",
+	"description": "TypeScript definitions for JSON-API",
 	"main": "index.ts",
 	"scripts": {
 		"test": "tsc && ./node_modules/.bin/mocha --opts tests/mocha.opts",
