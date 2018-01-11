@@ -1,34 +1,24 @@
-# JSON.ts <a href="https://travis-ci.org/mike-north/jsonapi.ts"  align='right'><img src="https://travis-ci.org/mike-north/jsonapi.ts.svg?branch=master"></a>
+# JSONAPI-typescript <a href="https://travis-ci.org/mike-north/jsonapi-typescript"  align='right'><img src="https://travis-ci.org/mike-north/jsonapi-typescript.svg?branch=master"></a>
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/mike-north/jsonapi.ts.svg)](https://greenkeeper.io/)
-TypeScript ambient type information for compile-time validation of [JSON:API documents](https://www.jsonapi.org/).
+[![Greenkeeper badge](https://badges.greenkeeper.io/mike-north/jsonapi-typescript.svg)](https://greenkeeper.io/)
+TypeScript type information for compile-time validation of [JSON:API documents](https://www.jsonapi.org/).
 
 ## How to use this
 
 1. Install this package
 ```js
-npm install --save-dev jsonapi.ts
+npm install --save-dev jsonapi-typescript
 ```
 
-2. Include this module in your `tsconfig.json`'s `typeRoots`
-```json
-{
-  "compilerOptions": {
-    "typeRoots": [
-      "node_modules/@types",
-      "node_modules/json-typescript",
-      "node_modules/jsonapi.ts"
-    ]
-  },
-  "exclude": [
-    "node_modules"
-  ]
-}
+2. Import this module
+```ts
+import JSONAPI from 'jsonapi-typescript';
 ```
 
 3. check to see if json types are validated correctly
 
 ```ts
+import JSONAPI from 'jsonapi-typescript';
 
 // ✅ This should be OK
 let doc: JSONAPI.Document = {

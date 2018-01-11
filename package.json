@@ -1,44 +1,44 @@
 {
-  "name": "jsonapi.ts",
-  "version": "0.0.5",
-  "description": "TypeScript ambient definitions for JSON-API",
-  "main": "jsonapi/index.d.ts",
-  "scripts": {
-    "test": "tsc && ./node_modules/.bin/mocha --opts tests/mocha.opts",
-    "lint": "./node_modules/.bin/tslint -p .",
-    "watch": "./node_modules/.bin/nodemon $(which npm) test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mike-north/jsonapi.ts.git"
-  },
-  "keywords": [
-    "jsonapi",
-    "typescript",
-    "ember-data",
-    "emberjs"
-  ],
-  "author": "Mike North <michael.l.north@gmail.com> (https://mike.works)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mike-north/jsonapi.ts/issues"
-  },
-  "homepage": "https://github.com/mike-north/jsonapi.ts#readme",
-  "devDependencies": {
-    "@types/chai": "^4.0.10",
-    "@types/mocha": "^2.2.44",
-    "chai": "^4.1.2",
-    "dtslint": "^0.2.0",
-    "mocha": "^4.0.1",
-    "mocha-typescript": "^1.1.12",
-    "nodemon": "^1.12.7",
-    "ts-node": "^4.0.1",
-    "tsconfig": "^7.0.0",
-    "tslint": "^5.8.0",
-    "typescript": "^2.6.2",
-    "typings-tester": "^0.3.0"
-  },
-  "dependencies": {
-    "json-typescript": "0.0.6"
-  }
+	"name": "jsonapi-typescript",
+	"version": "0.0.6",
+	"description": "TypeScript definitions for JSON-API",
+	"main": "index.ts",
+	"scripts": {
+		"test": "tsc && ./node_modules/.bin/mocha --opts tests/mocha.opts",
+		"lint": "./node_modules/.bin/tslint -p .",
+		"watch": "./node_modules/.bin/nodemon $(which npm) test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mike-north/jsonapi-typescript.git"
+	},
+	"keywords": [
+		"jsonapi",
+		"typescript",
+		"ember-data",
+		"emberjs"
+	],
+	"author": "Mike North <michael.l.north@gmail.com> (https://mike.works)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/mike-north/jsonapi-typescript/issues"
+	},
+	"homepage": "https://github.com/mike-north/jsonapi-typescript#readme",
+	"devDependencies": {
+		"@types/chai": "^4.0.10",
+		"@types/mocha": "^2.2.44",
+		"chai": "^4.1.2",
+		"dtslint": "^0.2.0",
+		"mocha": "^4.0.1",
+		"mocha-typescript": "^1.1.12",
+		"nodemon": "^1.12.7",
+		"ts-node": "^4.0.1",
+		"tsconfig": "^7.0.0",
+		"tslint": "^5.8.0",
+		"typescript": "^2.6.2",
+		"typings-tester": "^0.3.0"
+	},
+	"dependencies": {
+		"json-typescript": "^0.0.7"
+	}
 }

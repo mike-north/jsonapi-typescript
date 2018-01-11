@@ -5,7 +5,7 @@
     "tests/tsconfig.json",
     "tests/mocha.opts",
     "tsconfig.json",
-    "index.d.ts"
+    "index.ts"
   ],
   "ext": "ts js json"
 }
