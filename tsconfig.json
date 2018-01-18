@@ -8,7 +8,6 @@
 			"es2015"
 		],
 		"noImplicitThis": true,
-		"allowSyntheticDefaultImports": true,
 		"strictFunctionTypes": true,
 		"strictNullChecks": true,
 		"sourceMap": true,
