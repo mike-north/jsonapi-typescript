@@ -1,4 +1,4 @@
-import JSON from 'json-typescript';
+import * as JSON from 'json-typescript';
 // tslint:disable-next-line:no-namespace
 
 /*

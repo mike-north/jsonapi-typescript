@@ -3,7 +3,7 @@ import { assert } from 'chai';
 import { check, checkDirectory } from 'typings-tester';
 import { join } from 'path';
 import { assertTsThrows } from '../helpers';
-import JSONAPI from '../../index';
+import * as JSONAPI from '../../index';
 
 @suite(
 	'Top-Level Document Tests: A JSON object MUST be at the root of every JSON API request and response containing data.'
