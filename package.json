@@ -28,7 +28,7 @@
 		"@types/chai": "^4.0.10",
 		"@types/mocha": "^2.2.44",
 		"chai": "^4.1.2",
-		"dtslint": "^0.2.0",
+		"dtslint": "^0.3.0",
 		"mocha": "^4.0.1",
 		"mocha-typescript": "^1.1.12",
 		"nodemon": "^1.12.7",
