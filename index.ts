@@ -14,8 +14,9 @@ export interface DocWithMeta extends DocBase {
 	meta: MetaObject; // a meta object that contains non-standard meta-information.
 }
 
-export interface DocWithData extends DocBase {
-	data: PrimaryData; // the document’s “primary data”
+export interface DocWithData<T extends PrimaryData = PrimaryData>
+	extends DocBase {
+	data: T; // the document’s “primary data”
 	included?: Included;
 }
 

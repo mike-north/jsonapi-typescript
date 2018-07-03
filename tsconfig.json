@@ -2,7 +2,6 @@
 	"compilerOptions": {
 		"target": "es6",
 		"module": "commonjs",
-		"experimentalDecorators": true,
 		"noImplicitAny": true,
 		"lib": [
 			"es2015"
@@ -16,11 +15,10 @@
 		"noEmit": true
 	},
 	"exclude": [
-		"node_modules/**/*"
+		"node_modules/**/*",
+		"test/**/*"
 	],
 	"include": [
-		"./index.ts",
-		"./tests/helpers.ts",
-		"./tests/**/*test.ts"
+		"index.ts"
 	]
 }
