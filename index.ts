@@ -36,6 +36,14 @@ export interface DocBase {
 }
 
 export type Document = DocWithErrors | DocWithMeta | DocWithData;
+export type SingleResourceDoc<
+	T extends string = string,
+	A extends { [k: string]: JSON.Value } = { [k: string]: JSON.Value }
+> = DocWithData<ResourceObject<T, A>>;
+export type CollectionResourceDoc<
+	T extends string = string,
+	A extends { [k: string]: JSON.Value } = { [k: string]: JSON.Value }
+> = DocWithData<Array<ResourceObject<T, A>>>;
 
 // an object describing the server’s implementation
 export interface ImplementationInfo {
@@ -75,22 +83,18 @@ export interface ErrorObject {
 	meta?: MetaObject;
 }
 
-export type PrimaryData = SinglePrimaryData | CollectionPrimaryData;
+export type PrimaryData<
+	T extends string = string,
+	A extends AttributesObject = AttributesObject
+> = ResourceObject<T, A> | Array<ResourceObject<T, A>>;
 
-export type SinglePrimaryData =
-	| null
-	| ResourceObject
-	| ResourceIdentifierObject;
-
-export type CollectionPrimaryData =
-	| never[]
-	| ResourceObject[]
-	| ResourceIdentifierObject[];
-
-export interface ResourceObject {
+export interface ResourceObject<
+	T extends string = string,
+	A extends AttributesObject = AttributesObject
+> {
 	id?: string;
-	type: string;
-	attributes?: AttributesObject;
+	type: T;
+	attributes?: AttributesObject<A>;
 	relationships?: RelationshipsObject;
 	links?: Links;
 	meta?: MetaObject;
@@ -129,8 +133,8 @@ export interface RelationshipsObject {
 	[k: string]: RelationshipObject;
 }
 
-export interface AttributesObject {
-	[k: string]: JSON.Value;
-}
+export type AttributesObject<
+	ATTRS extends { [k: string]: JSON.Value } = { [k: string]: JSON.Value }
+> = { [K in keyof ATTRS]: ATTRS[K] };
 
 export type Errors = ErrorObject[];

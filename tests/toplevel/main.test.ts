@@ -1,8 +1,9 @@
 import { suite, test } from 'mocha-typescript';
 import { join } from 'path';
 import { assertTsThrows } from '../helpers';
-import * as JSONAPI from '../../index';
-import { SinglePrimaryData } from '../../index';
+import { DocWithData, Document } from '../..';
+import './collection-resource-doc';
+import './single-resource-doc';
 
 @suite(
 	'Top-Level Document Tests: A JSON object MUST be at the root of every JSON API request and response containing data.'
@@ -45,7 +46,7 @@ class TopLevelDocument {
 	}
 	@test('A few examples of valid documents')
 	validEmptyDocuments() {
-		let doc: JSONAPI.Document;
+		let doc: Document;
 		// Only errors
 		doc = { errors: [] };
 		// Only data
@@ -159,7 +160,7 @@ class TopLevelDocument {
 	@test('Document with data')
 	validDocWithData() {
 		// Array case
-		let d: JSONAPI.DocWithData = {
+		let d: DocWithData = {
 			data: [
 				{
 					type: 'foo'
@@ -172,49 +173,5 @@ class TopLevelDocument {
 				type: 'foo'
 			}
 		};
-	}
-
-	@test('Document with single resource data')
-	validDocWithSingleResourceData() {
-		// single resource case
-		let d: JSONAPI.DocWithData<SinglePrimaryData> = {
-			data: {
-				type: 'foo'
-			}
-		};
-	}
-
-	@test(
-		'DocWithData<SinglePrimaryData> will throw type error on a collection document'
-	)
-	async invalidDocWithSingleResourceData() {
-		await assertTsThrows(
-			join(__dirname, 'examples/bad-single-resource-doc.ts'),
-			/is not assignable to type 'DocWithData<SinglePrimaryData>'/,
-			'number is not a valid top-level document'
-		);
-	}
-
-	@test('Document with multi resource data')
-	validDocWithCollectionResourceData() {
-		// single resource case
-		let d: JSONAPI.DocWithData<JSONAPI.CollectionPrimaryData> = {
-			data: [
-				{
-					type: 'foo'
-				}
-			]
-		};
-	}
-
-	@test(
-		'DocWithData<CollectionPrimaryData> will throw type error on a single-resource document'
-	)
-	async invalidDocWithCollectionResourceData() {
-		await assertTsThrows(
-			join(__dirname, 'examples/bad-collection-doc.ts'),
-			/is not assignable to type 'DocWithData<CollectionPrimaryData>'/,
-			'number is not a valid top-level document'
-		);
 	}
 }
