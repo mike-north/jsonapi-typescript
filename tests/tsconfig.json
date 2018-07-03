@@ -1,27 +1,12 @@
 {
+  "extends": "../tsconfig",
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "experimentalDecorators": true,
-    "noImplicitAny": true,
-    "lib": [
-      "es2015"
-    ],
-    "noImplicitThis": true,
-    "allowSyntheticDefaultImports": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "sourceMap": true,
-    "noUnusedParameters": true,
-    "noEmitOnError": true,
-    "noEmit": true
+    "experimentalDecorators": true
   },
-  "exclude": [
-    "..node_modules/**/*",
-    "helpers.ts",
-    "**/*test.ts"
-  ],
   "include": [
-    "**/*.ts"
+    "**/*.test.ts"
+  ],
+  "exclude": [
+    "**/examples/*.ts"
   ]
 }

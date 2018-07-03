@@ -1,9 +1,9 @@
-import { suite, test, slow, timeout, only } from 'mocha-typescript';
-import { assert } from 'chai';
-import { check, checkDirectory } from 'typings-tester';
+import { suite, test } from 'mocha-typescript';
 import { join } from 'path';
 import { assertTsThrows } from '../helpers';
-import * as JSONAPI from '../../index';
+import { DocWithData, Document } from '../..';
+import './collection-resource-doc';
+import './single-resource-doc';
 
 @suite(
 	'Top-Level Document Tests: A JSON object MUST be at the root of every JSON API request and response containing data.'
@@ -35,6 +35,7 @@ class TopLevelDocument {
 			'number is not a valid top-level document'
 		);
 	}
+
 	@test('only having a "jsonapi" property is not a top-level document')
 	async onlyJsonApiInfo() {
 		await assertTsThrows(
@@ -45,7 +46,7 @@ class TopLevelDocument {
 	}
 	@test('A few examples of valid documents')
 	validEmptyDocuments() {
-		let doc: JSONAPI.Document;
+		let doc: Document;
 		// Only errors
 		doc = { errors: [] };
 		// Only data
@@ -153,6 +154,24 @@ class TopLevelDocument {
 					}
 				}
 			]
+		};
+	}
+
+	@test('Document with data')
+	validDocWithData() {
+		// Array case
+		let d: DocWithData = {
+			data: [
+				{
+					type: 'foo'
+				}
+			]
+		};
+		// Object case
+		d = {
+			data: {
+				type: 'foo'
+			}
 		};
 	}
 }

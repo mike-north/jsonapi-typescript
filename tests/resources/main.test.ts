@@ -1,9 +1,7 @@
 import { suite, test, slow, timeout, only } from 'mocha-typescript';
-import { assert } from 'chai';
-import { check, checkDirectory } from 'typings-tester';
 import { join } from 'path';
 import { assertTsThrows } from '../helpers';
-import * as JSONAPI from '../../index';
+import { ResourceObject } from '../..';
 
 @suite('Resource objects')
 class ResourceTests {
@@ -11,7 +9,7 @@ class ResourceTests {
 	async emptyObject() {
 		await assertTsThrows(
 			join(__dirname, 'examples/empty-object.ts'),
-			/is not assignable to type 'ResourceObject'/,
+			/is not assignable to type 'ResourceObject/,
 			'string is not a valid resource object'
 		);
 	}
@@ -20,14 +18,14 @@ class ResourceTests {
 	async hasType() {
 		await assertTsThrows(
 			join(__dirname, 'examples/missing-type.ts'),
-			/is not assignable to type 'ResourceObject'/,
+			/is not assignable to type 'ResourceObject/,
 			'string is not a valid resource object'
 		);
 	}
 
 	@test('A few examples of valid resource objects')
 	validResourceObjects() {
-		let o: JSONAPI.ResourceObject;
+		let o: ResourceObject;
 		o = {
 			type: 'articles',
 			id: '1',
