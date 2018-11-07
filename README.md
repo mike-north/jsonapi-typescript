@@ -14,13 +14,13 @@ npm install --save-dev jsonapi-typescript
 
 2. Import this module
 ```ts
-import JSONAPI from 'jsonapi-typescript';
+import * as JSONAPI from 'jsonapi-typescript';
 ```
 
 3. check to see if json types are validated correctly
 
 ```ts
-import JSONAPI from 'jsonapi-typescript';
+import * as JSONAPI from 'jsonapi-typescript';
 
 // ✅ This should be OK
 let doc: JSONAPI.Document = {
