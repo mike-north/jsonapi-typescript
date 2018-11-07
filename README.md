@@ -1,6 +1,8 @@
-# JSONAPI-typescript <a href="https://travis-ci.org/mike-north/jsonapi-typescript"  align='right'><img src="https://travis-ci.org/mike-north/jsonapi-typescript.svg?branch=master"></a>
+# JSONAPI-typescript
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/mike-north/jsonapi-typescript.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/mike-north/jsonapi-typescript.svg?branch=master)](https://travis-ci.org/mike-north/jsonapi-typescript)
+[![Version](https://img.shields.io/npm/v/jsonapi-typescript.svg)](https://www.npmjs.com/package/jsonapi-typescript)
+
 TypeScript type information for compile-time validation of [JSON:API documents](https://www.jsonapi.org/).
 
 ## How to use this
