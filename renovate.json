@@ -1,5 +1,5 @@
 {
   "extends": [
-    "config:base"
+    "@mike-north/js-lib-renovate-config"
   ]
 }
