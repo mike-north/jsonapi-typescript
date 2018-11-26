@@ -41,7 +41,7 @@
 		"mocha-typescript": "1.1.17",
 		"nodemon": "1.18.6",
 		"nyc": "13.1.0",
-    "semantic-release": "15.12.1",
+    "semantic-release": "15.12.2",
     "travis-deploy-once": "5.0.9",
 		"ts-node": "4.1.0",
 		"tsconfig": "7.0.0",
