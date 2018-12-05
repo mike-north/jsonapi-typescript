@@ -8,10 +8,29 @@ before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
 
-before_script: yarn global add codecov
+install:
+  - yarn install --no-lockfile --non-interactive
 
-script:
-  - commitlint-travis
-  - node_modules/.bin/nyc yarn test && yarn travis-deploy-once "yarn semantic-release"
+stages:
+  - 'Test'
+  - name: 'Deploy'
+    if: branch = master AND type = push
 
-after_success: codecov
+jobs:
+  fail_fast: true
+  include:
+    - stage: 'Test'
+      name: 'Conventional Commits'
+      script: commitlint-travis
+    - name: 'Fixed Dependencies'
+      before_script: yarn global add codecov
+      install: yarn install --non-interactive
+      script: node_modules/.bin/nyc yarn test
+      after_success: codecov
+    - name: 'Floating Dependencies'
+
+    - stage: 'Deploy'
+      name: 'Publish to npm'
+      install:
+        - yarn install --non-interactive
+      script: yarn semantic-release
