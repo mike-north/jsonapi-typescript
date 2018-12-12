@@ -33,6 +33,7 @@ export interface DocWithErrors extends DocBase {
 export interface DocBase {
 	jsonapi?: ImplementationInfo;
 	links?: Links | PaginationLinks;
+	meta?: MetaObject;
 }
 
 export type Document = DocWithErrors | DocWithMeta | DocWithData;
