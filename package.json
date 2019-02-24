@@ -26,9 +26,9 @@
 	},
 	"homepage": "https://github.com/mike-north/jsonapi-typescript#readme",
 	"devDependencies": {
-		"@commitlint/cli": "7.5.1",
+		"@commitlint/cli": "7.5.2",
     "@commitlint/config-conventional": "7.5.0",
-    "@commitlint/travis-cli": "7.5.1",
+    "@commitlint/travis-cli": "7.5.2",
     "@mike-north/js-lib-renovate-config": "1.1.5",
     "@mike-north/js-lib-semantic-release-config": "1.0.1",
 		"@types/chai": "4.1.7",
