@@ -40,7 +40,7 @@
 		"mocha-typescript": "1.1.17",
 		"nodemon": "1.18.10",
 		"nyc": "13.2.0",
-    "semantic-release": "15.12.4",
+    "semantic-release": "15.12.5",
 		"ts-node": "4.1.0",
 		"tsconfig": "7.0.0",
 		"tslint": "5.12.0",
