@@ -36,7 +36,7 @@
 		"chai": "4.2.0",
 		"dtslint": "0.4.9",
 		"husky": "1.2.1",
-		"mocha": "5.2.0",
+		"mocha": "6.0.2",
 		"mocha-typescript": "1.1.17",
 		"nodemon": "1.18.10",
 		"nyc": "13.2.0",
