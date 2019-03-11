@@ -25,12 +25,10 @@ jobs:
     - stage: 'Conventional Commits'
       name: 'Conventional Commits'
       script: commitlint-travis
-    - stage: 'Basic Tests'
+
+	  - stage: 'Basic Tests'
       name: 'Fixed Dependencies'
-      before_script: yarn global add codecov
       install: yarn install --non-interactive
-      script: node_modules/.bin/nyc yarn test
-      after_success: codecov
     
     - stage: 'Compatibility Tests'
       name: 'Floating Dependencies'
