@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/mike-north/jsonapi-typescript.svg?branch=master)](https://travis-ci.org/mike-north/jsonapi-typescript)
 [![Version](https://img.shields.io/npm/v/jsonapi-typescript.svg)](https://www.npmjs.com/package/jsonapi-typescript)
 
-TypeScript type information for compile-time validation of [JSON:API documents](https://www.jsonapi.org/).
+TypeScript type information for compile-time validation of [JSON:API documents](https://www.jsonapi.org/). Supports TS 2.3 and above.
 
 ## How to use this
 
