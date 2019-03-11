@@ -12,6 +12,8 @@ install:
   - yarn install --no-lockfile --non-interactive
 
 stages:
+  - name: 'Conventional Commits'
+    if: type = push
   - 'Basic Tests'
   - 'Compatibility Tests'
   - name: 'Deploy'
@@ -20,10 +22,11 @@ stages:
 jobs:
   fail_fast: true
   include:
-    - stage: 'Basic Tests'
+    - stage: 'Conventional Commits'
       name: 'Conventional Commits'
       script: commitlint-travis
-    - name: 'Fixed Dependencies'
+    - stage: 'Basic Tests'
+      name: 'Fixed Dependencies'
       before_script: yarn global add codecov
       install: yarn install --non-interactive
       script: node_modules/.bin/nyc yarn test
