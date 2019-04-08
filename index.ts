@@ -10,6 +10,10 @@ import * as JSON from 'json-typescript';
 
 export type MetaObject = JSON.Object;
 
+/**
+ * this type is no longer required, as the meta has been moved to the DocBase
+ * this type can be safely removed in future versions
+ */
 export interface DocWithMeta extends DocBase {
 	meta: MetaObject; // a meta object that contains non-standard meta-information.
 }
@@ -33,6 +37,7 @@ export interface DocWithErrors extends DocBase {
 export interface DocBase {
 	jsonapi?: ImplementationInfo;
 	links?: Links | PaginationLinks;
+	meta?: MetaObject; // a meta object that contains non-standard meta-information.
 }
 
 export type Document = DocWithErrors | DocWithMeta | DocWithData;
