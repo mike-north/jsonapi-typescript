@@ -1,3 +1,11 @@
+## [0.1.1](https://github.com/mike-north/jsonapi-typescript/compare/v0.1.0...v0.1.1) (2019-04-10)
+
+
+### Bug Fixes
+
+* add meta to the DocBase type ([e63612e](https://github.com/mike-north/jsonapi-typescript/commit/e63612e))
+* use dtslint for tests ([a163180](https://github.com/mike-north/jsonapi-typescript/commit/a163180))
+
 # [0.1.0](https://github.com/mike-north/jsonapi-typescript/compare/v0.0.8...v0.1.0) (2018-11-07)
 
 
