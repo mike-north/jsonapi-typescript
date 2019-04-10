@@ -1,12 +1,9 @@
 import * as JSON from 'json-typescript';
-// tslint:disable-next-line:no-namespace
-
-/*
-	A JSON object MUST be at the root of every JSON API request and response
-	containing data. This object defines a document’s “top level”.
-
-	A document MUST contain at least one of the following top-level members:
-	*/
+/**
+ * A JSON object MUST be at the root of every JSON API request and responsecontaining data.
+ * This object defines a document’s “top level”.
+ * A document MUST contain at least one of the following top-level members:
+ */
 
 export type MetaObject = JSON.Object;
 
