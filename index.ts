@@ -1,11 +1,11 @@
-import * as JSON from 'json-typescript';
+import { Object as JSONObject, Value as JSONValue } from 'json-typescript';
 /**
  * A JSON object MUST be at the root of every JSON API request and responsecontaining data.
  * This object defines a document’s “top level”.
  * A document MUST contain at least one of the following top-level members:
  */
 
-export type MetaObject = JSON.Object;
+export type MetaObject = JSONObject;
 
 /**
  * this type is no longer required, as the meta has been moved to the DocBase
@@ -40,12 +40,12 @@ export interface DocBase {
 export type Document = DocWithErrors | DocWithMeta | DocWithData;
 export type SingleResourceDoc<
 	T extends string = string,
-	A extends { [k: string]: JSON.Value } = { [k: string]: JSON.Value }
-> = DocWithData<ResourceObject<T, A>>;
+	A extends { [k: string]: JSONValue } = { [k: string]: JSONValue }
+	> = DocWithData<ResourceObject<T, A>>;
 export type CollectionResourceDoc<
 	T extends string = string,
-	A extends { [k: string]: JSON.Value } = { [k: string]: JSON.Value }
-> = DocWithData<Array<ResourceObject<T, A>>>;
+	A extends { [k: string]: JSONValue } = { [k: string]: JSONValue }
+	> = DocWithData<Array<ResourceObject<T, A>>>;
 
 // an object describing the server’s implementation
 export interface ImplementationInfo {
@@ -88,12 +88,12 @@ export interface ErrorObject {
 export type PrimaryData<
 	T extends string = string,
 	A extends AttributesObject = AttributesObject
-> = ResourceObject<T, A> | Array<ResourceObject<T, A>>;
+	> = ResourceObject<T, A> | Array<ResourceObject<T, A>>;
 
 export interface ResourceObject<
 	T extends string = string,
 	A extends AttributesObject = AttributesObject
-> {
+	> {
 	id?: string;
 	type: T;
 	attributes?: AttributesObject<A>;
@@ -136,7 +136,7 @@ export interface RelationshipsObject {
 }
 
 export type AttributesObject<
-	ATTRS extends { [k: string]: JSON.Value } = { [k: string]: JSON.Value }
-> = { [K in keyof ATTRS]: ATTRS[K] };
+	ATTRS extends { [k: string]: JSONValue } = { [k: string]: JSONValue }
+	> = { [K in keyof ATTRS]: ATTRS[K] };
 
 export type Errors = ErrorObject[];
