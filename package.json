@@ -33,7 +33,7 @@
 				"@mike-north/js-lib-semantic-release-config": "1.0.1",
 				"dtslint": "0.5.5",
 				"husky": "2.4.1",
-				"nodemon": "1.18.10",
+				"nodemon": "2.0.12",
 				"semantic-release": "15.13.3",
 				"tslint": "5.17.0",
 				"typescript": "3.5.1"
