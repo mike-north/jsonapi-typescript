@@ -35,8 +35,8 @@
 				"husky": "2.4.1",
 				"nodemon": "1.18.10",
 				"semantic-release": "15.13.3",
-				"tslint": "5.17.0",
-				"typescript": "3.5.1"
+				"tslint": "5.20.1",
+				"typescript": "3.9.10"
 		},
 		"dependencies": {
 				"json-typescript": "^1.0.0"
