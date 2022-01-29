@@ -34,7 +34,7 @@
 				"dtslint": "0.9.9",
 				"husky": "2.7.0",
 				"nodemon": "1.19.4",
-				"semantic-release": "15.13.3",
+				"semantic-release": "19.0.2",
 				"tslint": "5.17.0",
 				"typescript": "3.5.3"
 		},
