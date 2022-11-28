@@ -3744,9 +3744,9 @@ ignore-walk@^3.0.1:
     minimatch "^3.0.4"
 
 ignore@^5.1.1:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
-  integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.1.tgz#c2b1f76cb999ede1502f3a226a9310fdfe88d46c"
+  integrity sha512-d2qQLzTJ9WxQftPAuEQpSPmKqzxePjzVbpAVv62AQ64NTL+wR4JkrVqR/LqFsFEUsHDAiId52mJteHDFuDkElA==
 
 import-fresh@^2.0.0:
   version "2.0.0"
@@ -7324,9 +7324,9 @@ typescript@3.5.3:
   integrity sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
 
 typescript@next:
-  version "5.0.0-dev.20221121"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.0-dev.20221121.tgz#f9ad6445c22b58ec4c8e5d11baf0e2a11eda4799"
-  integrity sha512-p7Nubpa0zmn90Uyacwy26poAIoMmYhEvFxXWs9Kb4INjfQQhQ1svVoXL1R2nQjD9a8W/H9F8BhETzS09ztLMog==
+  version "5.0.0-dev.20221128"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.0-dev.20221128.tgz#c42cfe49dc7ea504ba778d66fca0dbe681bd432a"
+  integrity sha512-cNV/osEHGNKTyjj/Ivi8s8x7MPkh0Kd/t53QjyXfM3jO3cC2jhL6kor57ziWqvyfl6paWjdNUVO/jxGsQOyfug==
 
 uglify-js@^3.1.4:
   version "3.17.4"
