@@ -1960,9 +1960,9 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001733:
-  version "1.0.30001733"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001733.tgz#918405ed6647a62840fb328832cf5a03f986974b"
-  integrity sha512-e4QKw/O2Kavj2VQTKZWrwzkt3IxOmIlU6ajRb6LP64LHpBo1J67k2Hi4Vu/TgJWsNtynurfS0uK3MaUTCPfu5Q==
+  version "1.0.30001734"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001734.tgz#f97e08599e2d75664543ae4b6ef25dc2183c5cc6"
+  integrity sha512-uhE1Ye5vgqju6OI71HTQqcBCZrvHugk0MjLak7Q+HfoBgoq5Bi+5YnwjP4fjDgrtYr/l8MVRBvzz9dPD4KyK0A==
 
 capture-stack-trace@^1.0.0:
   version "1.0.2"
@@ -7657,9 +7657,9 @@ typescript@3.5.3:
   integrity sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
 
 typescript@next:
-  version "6.0.0-dev.20250810"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.0-dev.20250810.tgz#d048d0b3675ac12f2b2f14c4d299b06beb7e2f36"
-  integrity sha512-AComoDXeQZDb4aD23NHi2w0nv4UR74nVYg4I4EkTcAo7H9Aw5jcqpq1uleLO2p9YylVJap4KPFmvO1o+3C/06Q==
+  version "6.0.0-dev.20250811"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.0-dev.20250811.tgz#8b535be1648fbcb4316aba4f2f258fb1a25fb489"
+  integrity sha512-KtyfHCZo+t5NHIXctXGn2N5cev7aLGZf4Fw1QH+TsXDAR+k/lhEegTfwSCBrNkip27RpbkUnka3nhhIWLiKjvA==
 
 uglify-js@^3.1.4:
   version "3.19.3"
