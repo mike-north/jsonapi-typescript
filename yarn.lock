@@ -3108,9 +3108,9 @@ fast-json-stable-stringify@^2.0.0:
   integrity sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
 
 fastq@^1.6.0:
-  version "1.19.1"
-  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.19.1.tgz#d50eaba803c8846a883c16492821ebcd2cda55f5"
-  integrity sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==
+  version "1.20.1"
+  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.20.1.tgz#ca750a10dc925bc8b18839fd203e3ef4b3ced675"
+  integrity sha512-GGToxJ/w1x32s/D2EKND7kTil4n8OVk/9mycTc4VDza13lOvpUZTGX3mFSCtV9ksdGBVzvsyAVLM6mHFThxXxw==
   dependencies:
     reusify "^1.0.4"
 
@@ -7664,9 +7664,9 @@ typescript@3.5.3:
   integrity sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
 
 typescript@next:
-  version "6.0.0-dev.20251222"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.0-dev.20251222.tgz#dc6218f39c7fee30193205d100ec1c8da991ffb6"
-  integrity sha512-AL5LJjMNyEZN8eHybIAKer/tNSNI0QYz8L94uWgxGLk005Vt9rwUU/VhXP47I89mVJj8GBcf9p0SSKQ7fAEBEA==
+  version "6.0.0-dev.20251229"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.0-dev.20251229.tgz#3621f938500da37a2093bba51c9e4018e2df0642"
+  integrity sha512-3h9Q6IX4dh0spuR4WBkNEctvgkzHUUpf8plnM4AZ3bpWX+AnkgSmh1yHuGwJw8iAEAFGKAIABayWe6NenKQY8g==
 
 uglify-js@^3.1.4:
   version "3.19.3"
