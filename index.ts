@@ -40,11 +40,11 @@ export interface DocBase {
 export type Document = DocWithErrors | DocWithMeta | DocWithData;
 export type SingleResourceDoc<
 	T extends string = string,
-	A extends { [k: string]: JSON.Value } = { [k: string]: JSON.Value }
+	A extends Attributes = Attributes
 > = DocWithData<ResourceObject<T, A>>;
 export type CollectionResourceDoc<
 	T extends string = string,
-	A extends { [k: string]: JSON.Value } = { [k: string]: JSON.Value }
+	A extends Attributes = Attributes
 > = DocWithData<Array<ResourceObject<T, A>>>;
 
 // an object describing the server’s implementation
@@ -52,6 +52,12 @@ export interface ImplementationInfo {
 	version?: string;
 	meta?: MetaObject;
 }
+
+interface Attribute  {
+	[k: string]: JSON.Value ;
+}
+
+type Attributes = Partial<Attribute>;
 
 export type Link = string | { href: string; meta?: MetaObject };
 
@@ -136,7 +142,7 @@ export interface RelationshipsObject {
 }
 
 export type AttributesObject<
-	ATTRS extends { [k: string]: JSON.Value } = { [k: string]: JSON.Value }
+	ATTRS extends Attributes = Attributes
 > = { [K in keyof ATTRS]: ATTRS[K] };
 
 export type Errors = ErrorObject[];
