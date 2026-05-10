@@ -25,11 +25,35 @@ const f: JSONAPI.SingleResourceDoc<
 		type: 'book',
 		attributes: {
 			title: 'Great Expectations',
-			chapters: 12,
-			author: 'F. Scott Fitzgerald'
+			author: 'F. Scott Fitzgerald',
+			chapters: 12
 		}
 	}
 };
+
+interface OptionalAttributes extends JSONAPI.AttributesObject {
+	title: string;
+	author?: string;
+	chapters: number
+}
+
+function optionalFunc(
+optionalAttributes: OptionalAttributes
+): JSONAPI.SingleResourceDoc<
+'book', OptionalAttributes
+> {
+	return {
+		data: {
+			type: 'book',
+			attributes: {
+				title: optionalAttributes.title,
+				author: optionalAttributes.author,
+				chapters: optionalAttributes.chapters
+			}
+		}
+	}
+}
+optionalFunc({title: 'Great Expectations', chapters:12})
 
 const g = {
 	data: {
